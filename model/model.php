@@ -33,6 +33,17 @@ class Model{
         // echo "this is the read method";
     }
 
+    public function filterData(){
+        $sql = "SELECT * FROM username WHERE id=298";
+        $result = $this->PDO->query($sql);
+        if($result){
+            return $result;
+        }
+        else{
+            return false;
+        }
+    }
+
     // delete
     public function deleteData($id){
         $sql = "DELETE FROM username WHERE id=?";

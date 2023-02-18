@@ -9,6 +9,6 @@
 <body>
     <p>this is my index view</p>
     <a href="http://localhost/mvcphp/view/addStudent.php">create</a></body>
-    <a href="http://localhost/mvcphp/actions/read.php">read all the list</a></body>
-        
+    <a href="http://localhost/mvcphp/actions/read.php">read all the list</a>
+</body> 
 </html>

@@ -1,8 +1,7 @@
 <?php
 
 require_once('C:\xampp\htdocs\mvcphp\model\model.php');
-require_once('C:\xampp\htdocs\mvcphp\actions\read.php');
-
+require_once('C:\xampp\htdocs\mvcphp\actions\read.php');//se eu comentar isso o delete/edite nao funciona. Se eu deixar, o filtro exibe tb a lista toda...
 
 class Controller{
     private $model;
@@ -33,6 +32,17 @@ class Controller{
             echo 'No data found sorry';
         }
     }
+
+    public function filter($filtered){
+        $result = $this->model->filterData($filtered);
+        if($result){
+            return $this->view->filters($result);
+        }
+        else{
+            echo "No data found";
+        }
+    }
+
     public function delete($id){
         $result  = $this->model->deleteData($id);
         if($result){
